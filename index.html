@@ -1,4 +1,4 @@
-<h1>Disclaimer: This site is not affiliated with plutosphere in any way the official pluto site is <a href="https://www.plutosphere.com/">plutosphere.com</a> and you should only buy tokens on <a href="https://store.pluto.app/">store.pluto.app</a></h1>
+<h1>Disclaimer: This site is not affiliated with plutosphere in any way the offcial pluto site is <a href="https://www.plutosphere.com/">plutosphere.com</a> and you should only buy tokens on <a href="https://store.pluto.app/">store.pluto.app</a></h1>
 
 <h2>Calculate play time</h2>
 <button name="playTimeButton" value="playTimeButton" type="button" onclick="calculatePlayTime()">Click here to calculate play time</button>  
@@ -69,7 +69,9 @@ function calculatePlayTime2(tokens){
 <button name="calculateTokens" value="calculateTokens" type="button" onclick="calculateTokens()">Click here to calculate play time</button>  
 <script>  
 function calculateTokens(){
-    playtime = window.prompt('How many playtime do you need (in minutes):')
+    playtimeH = window.prompt('How many playtime do you need (hours):')
+    playtimeM = window.prompt('How many playtime do you need (minutes):')
+    playtime = parseInt(playtimeH) * 60 + parseInt(playtimeM)
     tokens = parseInt(playtime)*10
     x = parseInt(tokens)/10;
     var hours = (x / 60);
