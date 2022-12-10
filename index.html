@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
 <h1>Calculate play time</h1>
 <button name="playTimeButton" value="playTimeButton" type="button" onclick="calculatePlayTime()">Click here to calculate play time</button>  
 <script>  
@@ -54,10 +51,17 @@ function calculatePrice(){
         alert(`Plan: \n    ${plan3}X 600 tokens\n    ${plan2}X 3000 tokens\n    ${plan1}X 6000  tokens\nPrice: ${priceTotal}\nPlay time: ${playTimeTotal}\nTokens: ${tokenTotal}\nLink: https://store.pluto.app/`)
     }
 }
+
+function calculatePlayTime(tokens){
+    x = parseInt(tokens)/10;
+    var hours = (x / 60);
+    var h = Math.floor(hours);
+    var minutes = (hours - h) * 60;
+    var m = Math.round(minutes);
+    return h + " hour(s) and " + m + " minute(s).";
+}
 </script>  
 </form>
 
 <h1>Advanced Features</h1>
 <p>Coming soon</p>
-</body>
-</html>
