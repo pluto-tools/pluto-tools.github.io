@@ -10,7 +10,7 @@ function calculatePlayTime(){
     var h = Math.floor(hours);
     var minutes = (hours - h) * 60;
     var m = Math.round(minutes);
-    alert(tokens + ' = ' + h + " hour(s) and " + m + " minute(s).")
+    alert(tokens + ' tokens = ' + h + " hour(s) and " + m + " minute(s).")
 }
 </script>  
 </form>
@@ -61,6 +61,22 @@ function calculatePlayTime2(tokens){
     var minutes = (hours - h) * 60;
     var m = Math.round(minutes);
     return h + " hour(s) and " + m + " minute(s).";
+}
+</script>  
+</form>
+
+<h2>Calculate tokens</h2>
+<button name="calculateTokens" value="calculateTokens" type="button" onclick="calculateTokens()">Click here to calculate play time</button>  
+<script>  
+function calculateTokens(){
+    playtime = window.prompt('How many playtime do you need (in minutes):')
+    tokens = parseInt(playtime)*10
+    x = parseInt(tokens)/10;
+    var hours = (x / 60);
+    var h = Math.floor(hours);
+    var minutes = (hours - h) * 60;
+    var m = Math.round(minutes);
+    alert(tokens + ' tokens = ' + h + " hour(s) and " + m + " minute(s).")
 }
 </script>  
 </form>
