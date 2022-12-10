@@ -49,12 +49,12 @@ function calculatePrice(){
 
         tokenTotal = 600 * plan3 + 3000 * plan2 + 6000 * plan1
         priceTotal = 1.99 * plan3 + 8.07 * plan2 + 15.30 * plan1
-        playTimeTotal = calculatePlayTime(tokenTotal)
+        playTimeTotal = calculatePlayTime2(tokenTotal)
         alert(`Plan: \n    ${plan3}X 600 tokens\n    ${plan2}X 3000 tokens\n    ${plan1}X 6000  tokens\nPrice: ${priceTotal}\nPlay time: ${playTimeTotal}\nTokens: ${tokenTotal}\nLink: https://store.pluto.app/`)
     }
 }
 
-function calculatePlayTime(tokens){
+function calculatePlayTime2(tokens){
     x = parseInt(tokens)/10;
     var hours = (x / 60);
     var h = Math.floor(hours);
